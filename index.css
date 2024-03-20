@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #c3c2c2;
+    text-decoration: none;
+}
+.purchase {
+    width: 434px;
+    height: 500px;
+}
+.container {
+    display: flex;
+    overflow: auto;
+}
+.sidebar {
+    flex: 1;
+    background-color: peru;
+}
+.goods-list {
+    flex: 2;
+}
+.goods-item {
+    background-color: pink;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.goods-item .goods-btns .i-jianhao{
+    display: none;
+}
+.goods-item.active .goods-btns .i-jianhao {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #9ab8ca;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+.goods-item .goods-btns .i-jiajiangzujianjiahao {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3692c7;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 434px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background-color: #999;
+    padding: 10px 5px;
+    color: #c3c2c2;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-cart {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #666;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 20px;
+}
+.footer-cart.active {
+    background-color: #3692c7;
+}
+.footer-cart.animate {
+    animation: footer-cart-animate 500ms ease-in-out;
+}
+@keyframes footer-cart-animate {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.footer-cart-tip {
+    font-size: 14px;
+}
+.footer-pay.active {
+    background-color: #76d472;
+}
+.footer-pay a,
+.footer-pay.active span {
+    display: none;
+}
+.footer-pay.active a,
+.footer-pay span{
+    display: block;
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.add-to-car {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 0.6s cubic-bezier(0.5, -0.5, 1, 1);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3692c7;
+    text-align: center;
+    line-height: 20px;
+}
